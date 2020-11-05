@@ -15,7 +15,7 @@ Produs::Produs(int pret_nou,char* marca_noua, Garantie garantie_nou)
 	else
 	{
 		marca = new char[strlen(marca_noua) + 1];
-		strcpy_s(marca, sizeof(marca), marca_noua);
+		strcpy(marca, marca_noua);
 	}
 }
 Produs& Produs:: operator=(const Produs& produs_nou)

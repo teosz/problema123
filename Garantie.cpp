@@ -4,7 +4,7 @@ Garantie::Garantie()
 	nr_luni = 0;
 	service = NULL;
 }
-Garantie::Garantie(int nr_luni_nou,char* service_nou)
+Garantie::Garantie(int nr_luni_nou, const char* service_nou)
 {
 	nr_luni = nr_luni_nou;
 	if (service_nou == NULL)
@@ -14,7 +14,7 @@ Garantie::Garantie(int nr_luni_nou,char* service_nou)
 	else
 	{
 		service = new char[strlen(service_nou) + 1];
-		strcpy_s(service, sizeof(service), service_nou);
+		strcpy(service, service_nou);
 	}
 
 }
@@ -28,7 +28,7 @@ Garantie::Garantie(const Garantie& garantie_noua)
 	else
 	{
 		service = new char[sizeof(garantie_noua.service) + 1];
-		strcpy_s(service, sizeof(service), garantie_noua.service);
+		strcpy(service, garantie_noua.service);
 	}
 
 }
